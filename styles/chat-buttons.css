@@ -8,7 +8,7 @@
 #chat-controls {
   padding: 0;
   margin: 0;
-  gap: 4px;
+  gap: inherit;
   align-items: center;
   width: 100%;
   display: flex;
