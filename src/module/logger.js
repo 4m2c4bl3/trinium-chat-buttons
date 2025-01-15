@@ -1,7 +1,7 @@
 export class TriniumLogger {
   constructor(moduleName) {
     this.moduleName = moduleName;
-    this.logLevel = game.settings.get('trinium-chat-buttons', 'logLevel');
+    this.logLevel = game.settings.get('trinium-chat-gm-screen', 'logLevel');
   }
 
   log(level, message, ...args) {

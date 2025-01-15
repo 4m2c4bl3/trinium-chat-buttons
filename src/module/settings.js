@@ -1,7 +1,7 @@
 import { GM_SCREEN_PRESETS } from '../templates/gm-screen-presets.js';
 
 export const SETTINGS = {
-  MODULE_NAME: 'trinium-chat-buttons',
+  MODULE_NAME: 'trinium-chat-gm-screen',
 
   PRIVACY_VISIBILITY: 'privacyButtonVisibility',
   MIDI_BUTTON_VISIBILITY: 'midiButtonVisibility',
@@ -249,125 +249,6 @@ export function registerGMScreenSettings() {
 }
 
 export function registerSettings() {
-  game.settings.register(SETTINGS.MODULE_NAME, SETTINGS.ENABLE_PRIVACY_BUTTONS, {
-    name: game.i18n.localize('TCB_SETTINGS.EnablePrivacyButtons'),
-    hint: game.i18n.localize('TCB_SETTINGS.EnablePrivacyButtonsHint'),
-    scope: 'world',
-    config: true,
-    type: Boolean,
-    default: true,
-  });
-
-  game.settings.register(SETTINGS.MODULE_NAME, SETTINGS.PRIVACY_VISIBILITY, {
-    name: game.i18n.localize('TCB_SETTINGS.PrivacyButtonVisibility'),
-    hint: game.i18n.localize('TCB_SETTINGS.PrivacyButtonVisibilityHint'),
-    scope: 'world',
-    config: true,
-    type: String,
-    choices: {
-      gm: game.i18n.localize('TCB_SETTINGS.GMOnly'),
-      players: game.i18n.localize('TCB_SETTINGS.PlayersOnly'),
-      everyone: game.i18n.localize('TCB_SETTINGS.Everyone'),
-    },
-    default: 'everyone',
-  });
-
-  game.settings.register(SETTINGS.MODULE_NAME, SETTINGS.ENABLE_MIDI_BUTTONS, {
-    name: game.i18n.localize('TCB_SETTINGS.EnableMidiButtons'),
-    hint: game.i18n.localize('TCB_SETTINGS.EnableMidiButtonsHint'),
-    scope: 'world',
-    config: true,
-    type: Boolean,
-    default: true,
-  });
-
-  game.settings.register(SETTINGS.MODULE_NAME, SETTINGS.MIDI_BUTTON_VISIBILITY, {
-    name: game.i18n.localize('TCB_SETTINGS.MidiButtonVisibility'),
-    hint: game.i18n.localize('TCB_SETTINGS.MidiButtonVisibilityHint'),
-    scope: 'world',
-    config: true,
-    type: String,
-    choices: {
-      gm: game.i18n.localize('TCB_SETTINGS.GMOnly'),
-      players: game.i18n.localize('TCB_SETTINGS.PlayersOnly'),
-      everyone: game.i18n.localize('TCB_SETTINGS.Everyone'),
-    },
-    default: 'gm',
-  });
-
-  game.settings.register(SETTINGS.MODULE_NAME, SETTINGS.ENABLE_POLLING, {
-    name: game.i18n.localize('TCB_SETTINGS.EnablePolling'),
-    hint: game.i18n.localize('TCB_SETTINGS.EnablePollingHint'),
-    scope: 'world',
-    config: true,
-    type: Boolean,
-    default: true,
-  });
-
-  game.settings.register(SETTINGS.MODULE_NAME, SETTINGS.POLLING_RATE, {
-    name: game.i18n.localize('TCB_SETTINGS.PollingRate'),
-    hint: game.i18n.localize('TCB_SETTINGS.PollingRateHint'),
-    scope: 'world',
-    config: true,
-    type: Number,
-    default: 150,
-  });
-
-  game.settings.register(SETTINGS.MODULE_NAME, SETTINGS.ENABLE_COMBAT_TRACKER_BUTTONS, {
-    name: game.i18n.localize('TCB_SETTINGS.EnableCombatTrackerButtons'),
-    hint: game.i18n.localize('TCB_SETTINGS.EnableCombatTrackerButtonsHint'),
-    scope: 'world',
-    config: true,
-    type: Boolean,
-    default: true,
-  });
-
-  game.settings.register(SETTINGS.MODULE_NAME, SETTINGS.COMBAT_TRACKER_VISIBILITY, {
-    name: game.i18n.localize('TCB_SETTINGS.CombatTrackerButtonVisibility'),
-    hint: game.i18n.localize('TCB_SETTINGS.CombatTrackerButtonVisibilityHint'),
-    scope: 'world',
-    config: true,
-    type: String,
-    choices: {
-      gm: game.i18n.localize('TCB_SETTINGS.GMOnly'),
-      players: game.i18n.localize('TCB_SETTINGS.PlayersOnly'),
-      everyone: game.i18n.localize('TCB_SETTINGS.Everyone'),
-    },
-    default: 'everyone',
-  });
-
-  game.settings.register(SETTINGS.MODULE_NAME, SETTINGS.HEALTH_PRIVACY, {
-    name: game.i18n.localize('TCB_SETTINGS.HealthPrivacy'),
-    hint: game.i18n.localize('TCB_SETTINGS.HealthPrivacyHint'),
-    scope: 'world',
-    config: true,
-    type: String,
-    choices: {
-      all: game.i18n.localize('TCB_SETTINGS.HealthPrivacyAll'),
-      healthbar: game.i18n.localize('TCB_SETTINGS.HealthPrivacyHealthbar'),
-      nothing: game.i18n.localize('TCB_SETTINGS.HealthPrivacyNothing'),
-    },
-    default: 'nothing',
-  });
-
-  game.settings.register(SETTINGS.MODULE_NAME, SETTINGS.ONLY_SHOW_TURN_CONTROLS, {
-    name: game.i18n.localize('TCB_SETTINGS.OnlyShowTurnControls'),
-    hint: game.i18n.localize('TCB_SETTINGS.OnlyShowTurnControlsHint'),
-    scope: 'world',
-    config: true,
-    type: Boolean,
-    default: false,
-  });
-
-  game.settings.register(SETTINGS.MODULE_NAME, SETTINGS.STYLE_FOUNDRY_COMBAT_TRACKER, {
-    name: game.i18n.localize('TCB_SETTINGS.StyleFoundryCombatTracker'),
-    hint: game.i18n.localize('TCB_SETTINGS.StyleFoundryCombatTrackerHint'),
-    scope: 'world',
-    config: true,
-    type: Boolean,
-    default: true,
-  });
-
   game.settings.register(SETTINGS.MODULE_NAME, SETTINGS.ENABLE_CSS_TWEAKS, {
     name: game.i18n.localize('TCB_SETTINGS.EnableCSSTweaks'),
     hint: game.i18n.localize('TCB_SETTINGS.EnableCSSTweaksHint'),

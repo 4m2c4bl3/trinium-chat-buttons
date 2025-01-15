@@ -26,11 +26,11 @@ class TriniumChatButtonsInit {
       $('<div>')
         .addClass('form-group group-header trinium-settings-header')
         .html(game.i18n.localize('TRINIUMCB.GMScreenHeader'))
-        .insertBefore($('[name="trinium-chat-buttons.enableGMScreen"]').closest('div.form-group'));
+        .insertBefore($('[name="trinium-chat-gm-screen.enableGMScreen"]').closest('div.form-group'));
       $('<div>')
         .addClass('form-group group-header trinium-settings-header')
         .html(game.i18n.localize('TRINIUMCB.DebugHeader'))
-        .insertBefore($('[name="trinium-chat-buttons.enableCSSTweaks"]').closest('div.form-group'));
+        .insertBefore($('[name="trinium-chat-gm-screen.enableCSSTweaks"]').closest('div.form-group'));
     });
   }
 }
@@ -43,7 +43,7 @@ Hooks.once('init', () => {
   }
   if (game.settings.get(SETTINGS.MODULE_NAME, SETTINGS.ENABLE_CSS_TWEAKS)) {
     const style = document.createElement('style');
-    style.id = 'trinium-chat-buttons-css-tweaks';
+    style.id = 'trinium-chat-gm-screen-css-tweaks';
     style.innerHTML = `
       /* Darker sidebar, no gap to the edge of the screen */
       #sidebar.app {
