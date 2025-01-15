@@ -50,21 +50,8 @@ class TriniumChatButtonsInit {
 Hooks.once('init', () => {
   TriniumChatButtonsInit.init();
 
-  if (game.settings.get(SETTINGS.MODULE_NAME, SETTINGS.ENABLE_PRIVACY_BUTTONS)) {
-    import('./module/chat-buttons/roll-privacy.js').then((module) => module.init());
-  }
-
-  if (game.settings.get(SETTINGS.MODULE_NAME, SETTINGS.ENABLE_MIDI_BUTTONS) && game.modules.get('midi-qol')?.active) {
-    import('./module/chat-buttons/midi.js').then((module) => module.init());
-  }
-
   if (game.settings.get(SETTINGS.MODULE_NAME, SETTINGS.ENABLE_GM_SCREEN)) {
     import('./module/chat-buttons/gm-screen.js').then((module) => module.init());
-  }
-
-  if (game.settings.get(SETTINGS.MODULE_NAME, SETTINGS.ENABLE_COMBAT_TRACKER_BUTTONS)) {
-    import('./module/chat-buttons/combat-tracker.js').then((module) => module.init());
-    import('./module/chat-buttons/utility.js').then((module) => module.init());
   }
 
   if (game.settings.get(SETTINGS.MODULE_NAME, SETTINGS.ENABLE_CSS_TWEAKS)) {
