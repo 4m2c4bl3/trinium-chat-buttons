@@ -1,5 +1,5 @@
 # Trinium Chat - ONLY GM SCREEN
-![](https://img.shields.io/badge/Foundry-v12-informational)![GitHub Downloads (specific asset, all releases)](https://img.shields.io/github/downloads/4m2c4bl3/trinium-chat-gm-screen/module.zip)
+![](https://img.shields.io/badge/Foundry-v12-informational) ![GitHub Downloads (specific asset, all releases)](https://img.shields.io/github/downloads/4m2c4bl3/trinium-chat-gm-screen/module.zip)
 
 `https://github.com/4m2c4bl3/trinium-chat-gm-screeny/releases/latest/download/module.json`
 
