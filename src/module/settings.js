@@ -4,20 +4,7 @@ export const SETTINGS = {
   MODULE_NAME: 'trinium-chat-gm-screen',
   WINDOW_MODULE_NAME: 'triniumChatGmScreen',
 
-  PRIVACY_VISIBILITY: 'privacyButtonVisibility',
-  MIDI_BUTTON_VISIBILITY: 'midiButtonVisibility',
-  ENABLE_POLLING: 'enablePolling',
-  POLLING_RATE: 'pollingRate',
-  COMBAT_TRACKER_VISIBILITY: 'combatTrackerButtonVisibility',
-  HEALTH_PRIVACY: 'healthPrivacy',
   LOG_LEVEL: 'logLevel',
-  ENABLE_CSS_TWEAKS: 'enableCSSTweaks',
-  ENABLE_PRIVACY_BUTTONS: 'enablePrivacyButtons',
-  ENABLE_MIDI_BUTTONS: 'enableMidiButtons',
-  ENABLE_COMBAT_TRACKER_BUTTONS: 'enableCombatTrackerButtons',
-  ONLY_SHOW_TURN_CONTROLS: 'onlyShowTurnControls',
-  STYLE_FOUNDRY_COMBAT_TRACKER: 'styleFoundryCombatTracker',
-  OVERRIDE_DND5E_CHECK: 'overrideDnd5eCheck',
 
   ENABLE_GM_SCREEN: 'enableGMScreen',
 
@@ -248,17 +235,7 @@ export function registerGMScreenSettings() {
     default: '',
   });
 }
-
 export function registerSettings() {
-  game.settings.register(SETTINGS.MODULE_NAME, SETTINGS.ENABLE_CSS_TWEAKS, {
-    name: game.i18n.localize('TCB_SETTINGS.EnableCSSTweaks'),
-    hint: game.i18n.localize('TCB_SETTINGS.EnableCSSTweaksHint'),
-    scope: 'world',
-    config: true,
-    type: Boolean,
-    default: true,
-  });
-
   game.settings.register(SETTINGS.MODULE_NAME, SETTINGS.LOG_LEVEL, {
     name: game.i18n.localize('TCB_SETTINGS.LogLevel'),
     hint: game.i18n.localize('TCB_SETTINGS.LogLevelHint'),

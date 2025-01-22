@@ -1,10 +1,10 @@
-import { TriniumLogger } from '../logger.js';
-import { SETTINGS, DEFAULT_COLUMN } from '../settings.js';
-import { Draggable } from '../../utils/draggable.js';
-import { JournalEntryRenderer } from '../../utils/journal-entry-renderer.js';
-import { TriniumConfirmationDialog } from '../../utils/confirmation-dialog.js';
-import { TriniumNotification } from '../../utils/notification.js';
-import { GM_SCREEN_PRESETS } from '../../templates/gm-screen-presets.js';
+import { TriniumLogger } from './logger.js';
+import { SETTINGS, DEFAULT_COLUMN } from './settings.js';
+import { Draggable } from '../utils/draggable.js';
+import { JournalEntryRenderer } from '../utils/journal-entry-renderer.js';
+import { TriniumConfirmationDialog } from '../utils/confirmation-dialog.js';
+import { TriniumNotification } from '../utils/notification.js';
+import { GM_SCREEN_PRESETS } from '../templates/gm-screen-presets.js';
 
 const CSS = {
   GM_SCREEN: '#tcb-gm-screen',

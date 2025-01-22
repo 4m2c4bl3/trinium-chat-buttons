@@ -16,7 +16,6 @@ class TriniumChatButtonsInit {
       const chatControls = html.find('#chat-controls');
       if (chatControls.length && !chatControls.parent().hasClass('chat-controls-wrapper')) {
         chatControls.wrap('<div class="chat-controls-wrapper"></div>');
-        chatControls.parent().append('<div id="tcb-midi-controls"></div>');
       }
     });
   }
@@ -37,27 +36,7 @@ class TriniumChatButtonsInit {
 
 Hooks.once('init', () => {
   TriniumChatButtonsInit.init();
-
   if (game.settings.get(SETTINGS.MODULE_NAME, SETTINGS.ENABLE_GM_SCREEN)) {
-    import('./module/chat-buttons/gm-screen.js').then((module) => module.init());
-  }
-  if (game.settings.get(SETTINGS.MODULE_NAME, SETTINGS.ENABLE_CSS_TWEAKS)) {
-    const style = document.createElement('style');
-    style.id = 'trinium-chat-gm-screen-css-tweaks';
-    style.innerHTML = `
-      /* Darker sidebar, no gap to the edge of the screen */
-      #sidebar.app {
-          background-color: rgba(25,25,25,0.6);
-          margin: 0px;
-          height: 100%;
-          border-radius: 0;
-      }
-
-      /* No gap below sidebar tab buttons */
-      #sidebar-tabs.tabs {
-          margin-bottom: 0px;
-      }
-    `;
-    document.head.appendChild(style);
+    import('./module/gm-screen.js').then((module) => module.init());
   }
 });
